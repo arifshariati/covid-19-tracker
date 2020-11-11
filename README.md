@@ -1,4 +1,4 @@
-# covid-19-tracker
+# 🦠 covid-19-tracker
 
 This project was developed with [Create React App](https://github.com/facebook/create-react-app) and [Material UI](https://material-ui.com/) for styling UI. Moreover, this project has dependencies as [React Chartjs-2](https://www.npmjs.com/package/react-chartjs-2) [React Leaflet](https://react-leaflet.js.org/) and [Numeral](https://www.npmjs.com/package/numeral)
 

@@ -39,7 +39,7 @@ const options = {
       },
       ticks: {
         callback: function (value, index, values) {
-          return numeral(value).format("0a");
+          return numeral(value).format("O a");
         },
       },
     },

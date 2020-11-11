@@ -1,6 +1,8 @@
-# Getting Started with Create React App
+# covid-19-tracker
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was developed with [Create React App](https://github.com/facebook/create-react-app) and [Material UI](https://material-ui.com/) for styling UI. Moreove, this project has dependencies as [React Chartjs-2](https://www.npmjs.com/package/react-chartjs-2) [React Leaflet](https://react-leaflet.js.org/) and [Numeral](https://www.npmjs.com/package/numeral)
+
+
 
 ## Available Scripts
 

@@ -1,8 +1,9 @@
 .table {
   margin-top: 1rem;
-  overflow: scroll;
+  overflow-y: scroll;
   height: 70vh;
   color: #6a5d5d;
+  background-color: white;
 }
 .table tr {
   display: flex;
@@ -10,6 +11,7 @@
 }
 .table td {
   padding: 0.5rem;
+  border: none;
 }
 .table tr:nth-last-of-type(odd) {
   background-color: #f3f2f8;

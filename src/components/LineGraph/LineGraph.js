@@ -11,7 +11,7 @@ const options = {
       redius: 0,
     },
   },
-  maintainAspectRation: false,
+  maintainAspectRatio: false,
   tooltips: {
     mode: "index",
     intersect: false,
@@ -39,58 +39,61 @@ const options = {
       },
       ticks: {
         callback: function (value, index, values) {
-          return numeral(value).format("O a");
+          return numeral(value).format("0a");
         },
       },
     },
   ],
 };
-function LineGraph() {
-  const [data, setData] = useState({});
 
-  const buildChartData = (data, caseType = "cases") => {
-    const chartData = [];
-    let lastDataPoint;
-    for (let date in data.cases) {
-      if (lastDataPoint) {
-        const newDataPoint = {
-          x: date,
-          y: data[caseType][date] - lastDataPoint,
-        };
+const buildChartData = (data, casesType) => {
+  const chartData = [];
+  let lastDataPoint;
+  for (let date in data.cases) {
+    if (lastDataPoint) {
+      const newDataPoint = {
+        x: date,
+        y: data[casesType][date] - lastDataPoint,
+      };
 
-        chartData.push(newDataPoint);
-      }
-      lastDataPoint = data[caseType][date];
+      chartData.push(newDataPoint);
     }
-    return chartData;
-  };
+    lastDataPoint = data[casesType][date];
+  }
+  return chartData;
+};
+
+function LineGraph({ casesType }) {
+  const [data, setData] = useState({});
 
   useEffect(() => {
     const fetchData = async () => {
       await fetch("https://disease.sh/v3/covid-19/historical/all?lastdays=120")
-        .then((response) => response.json())
+        .then((response) => {
+          return response.json();
+        })
         .then((data) => {
-          const chartData = buildChartData(data);
+          const chartData = buildChartData(data, casesType);
           setData(chartData);
         });
     };
     fetchData();
-  }, []);
+  }, [casesType]);
 
   return (
     <div>
       {data?.length > 0 && (
         <Line
-          options={options}
           data={{
             datasets: [
               {
-                data: data,
-                backgroundColor: "rgba(204,16,52,0.9)",
+                backgroundColor: "rgba(204,16,52,0.5)",
                 borderColor: "#CC1034",
+                data: data,
               },
             ],
           }}
+          options={options}
         />
       )}
     </div>

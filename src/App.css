@@ -3,7 +3,11 @@
   padding: 0%;
   box-sizing: border-box;
 }
-
+.app {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 1rem;
+}
 .app__header {
   display: flex;
   justify-content: space-between;
@@ -13,4 +17,10 @@
 .app__stats {
   display: flex;
   justify-content: space-between;
+}
+
+@media (max-width: 990px) {
+  .app {
+    flex-direction: column;
+  }
 }

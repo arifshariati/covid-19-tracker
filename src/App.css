@@ -8,6 +8,9 @@
   justify-content: space-evenly;
   padding: 1rem;
 }
+.app__left {
+  flex: 0.9;
+}
 .app__header {
   display: flex;
   justify-content: space-between;

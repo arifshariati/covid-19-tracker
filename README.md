@@ -1,8 +1,10 @@
 # covid-19-tracker
 
-This project was developed with [Create React App](https://github.com/facebook/create-react-app) and [Material UI](https://material-ui.com/) for styling UI. Moreove, this project has dependencies as [React Chartjs-2](https://www.npmjs.com/package/react-chartjs-2) [React Leaflet](https://react-leaflet.js.org/) and [Numeral](https://www.npmjs.com/package/numeral)
+This project was developed with [Create React App](https://github.com/facebook/create-react-app) and [Material UI](https://material-ui.com/) for styling UI. Moreover, this project has dependencies as [React Chartjs-2](https://www.npmjs.com/package/react-chartjs-2) [React Leaflet](https://react-leaflet.js.org/) and [Numeral](https://www.npmjs.com/package/numeral)
 
+Checkout Live Demo [here](https://covid-19-tracker-713f4.web.app/)
 
+if you are interested in trying out the code in your local machine, follow bellow instruction. Cheers ! 
 
 ## Available Scripts
 
